@@ -1,0 +1,8 @@
+name: CrashClient
+main: com.comze_instancelabs.crashclient.Main
+version: 1.0
+author: instancelabs
+commands:
+   crash:
+      description: Crash a player
+      usage: /crash [name]
