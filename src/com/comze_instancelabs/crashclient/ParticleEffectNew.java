@@ -2,10 +2,11 @@ package com.comze_instancelabs.crashclient;
 
 import java.lang.reflect.Field;
 
-import net.minecraft.server.v1_6_R2.Packet63WorldParticles;
+
+import net.minecraft.server.v1_7_R1.PacketPlayOutWorldParticles;
 
 import org.bukkit.Location;
-import org.bukkit.craftbukkit.v1_6_R2.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_7_R1.entity.CraftPlayer;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 
@@ -169,8 +170,8 @@ public enum ParticleEffectNew {
      * @return
      * @throws Exception
      */
-	private Packet63WorldParticles getParticle (Location location, float offsetX, float offsetY, float offsetZ, float speed, int count) throws Exception {
-		Packet63WorldParticles packet = new Packet63WorldParticles();
+	private PacketPlayOutWorldParticles getParticle (Location location, float offsetX, float offsetY, float offsetZ, float speed, int count) throws Exception {
+		PacketPlayOutWorldParticles packet = new PacketPlayOutWorldParticles();
 		setValue(packet, "a", packetName.replace("%id%", ""+_id).replace("%data%", ""+_data));
 		setValue(packet, "b", (float) location.getX());
 		setValue(packet, "c", (float) location.getY());
